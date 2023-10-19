@@ -1,0 +1,55 @@
+:root {
+  --brown: #645240;
+  --cream: #fcf8d9;
+  --olive: #556b2f;
+  --black: #0e0e0e;
+  --white: #ffffff;
+  --red: #ff2f2f;
+
+  --primary: var(--brown);
+  --secondary: var(--cream);
+  --accent: var(--olive);
+  --error: var(--red);
+
+  --bg: var(--white);
+  --fg: var(--black);
+  --border: rgba(0, 0, 0, 0.075);
+
+  color-scheme: light dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+/* body[data-theme='light'] {
+  --bg: var(--silver);
+  --fg: var(--black);
+}
+body[data-theme='dark'] {
+  --bg: var(--jet);
+  --fg: var(--white);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--jet);
+    --fg: var(--white);
+  }
+} */
