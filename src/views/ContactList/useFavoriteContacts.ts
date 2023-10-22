@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { localStorageCreator } from '@/libs/utils/localStorageCreator';
-import type { GetContactListQuery } from '@/__generated_gql_type__/graphql';
 import type { ContactData } from '@/components/base/ContactForm';
 
 /**
@@ -10,7 +9,7 @@ export type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[]
   ? ElementType
   : never;
 
-type ContactDataWithId = { id: number } & ContactData;
+export type ContactDataWithId = { id: number } & ContactData;
 
 export const useFavoriteStore = localStorageCreator<{
   contact: ContactDataWithId[];

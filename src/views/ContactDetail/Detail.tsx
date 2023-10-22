@@ -48,11 +48,11 @@ const DetailActions = () => {
     else {
       if (favContact) {
         removeFavorite(id);
-        setLocation(`/list`);
+        setLocation('/');
       } else {
         try {
           await deleteContact({ variables: { id } });
-          setLocation(`/list`);
+          setLocation('/');
         } catch (err: any) {
           setDeleteError(err.message);
         }

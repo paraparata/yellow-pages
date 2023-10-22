@@ -8,11 +8,10 @@ import {
   GetContactList,
   GetContactListCount,
 } from '@/libs/gqlQueries/phoneBookQueries';
-import type { ArrElement } from './useFavoriteContacts';
-import type { GetContactListQuery } from '@/__generated_gql_type__/graphql';
+import type { ContactDataWithId } from './useFavoriteContacts';
 
 interface FavoriteListProps {
-  contact: GetContactListQuery['contact'];
+  contact: ContactDataWithId[];
 }
 
 const FavoriteList: React.FC<FavoriteListProps> = ({ contact }) => {
@@ -35,9 +34,7 @@ const FavoriteList: React.FC<FavoriteListProps> = ({ contact }) => {
     [contact, searchQuery]
   );
 
-  const handleToFavorite = async (
-    person: ArrElement<GetContactListQuery['contact']>
-  ) => {
+  const handleToFavorite = async (person: ContactDataWithId) => {
     await addContact({
       variables: {
         first_name: person.first_name,
