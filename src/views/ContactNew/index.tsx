@@ -16,7 +16,7 @@ const NewForm = () => {
     awaitRefetchQueries: true,
   });
 
-  const handleCancel = () => setLocation('/list');
+  const handleCancel = () => setLocation('/');
 
   const handleForm: ContactFormProps['onFormValid'] = async (
     values,

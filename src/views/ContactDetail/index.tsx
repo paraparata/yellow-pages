@@ -53,7 +53,7 @@ const ContactDetail = () => {
             <Button
               variant='icon'
               aria-label='delete phone number'
-              onClick={() => setLocation('/list')}
+              onClick={() => setLocation('/')}
             >
               <ArrowLeft size={18} weight='light' />
             </Button>
