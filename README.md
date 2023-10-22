@@ -11,7 +11,7 @@ VITE_GQL_SERVER_URL=
 VITE_GET_CONTACT_LIMIT=
 ```
 
-Copy `.env` to project dir, then:
+Ensure to use NodeJS ^v18. Copy `.env` to project dir, then:
 
 ```sh
 $ npm i
